@@ -59,7 +59,7 @@ header h1 {
 .formulario {
     width: 95%;
     margin: 0 auto;
-    padding: 10rem 0;
+    padding: 10rem 2rem;
 }
 @media (min-width: 768px) {
     .formulario {
@@ -97,6 +97,7 @@ header h1 {
     border: none;
     flex: 1;
     font-size: 1.6rem;
+    width: 100%;
 }
 .formulario input[type="submit"] {
     background-color: #1048a4;
@@ -145,8 +146,7 @@ header h1 {
     border-left: 5px solid #b91c1c;
     color: #b91c1c;
 }
-.alerta.success {
-}
+
 
 .contenedor {
     width: 90%;
@@ -186,6 +186,7 @@ header h1 {
     font-size: 2.8rem;
     text-align: center;
 }
+
 
 .contenedor-presupuesto svg {
     width: 25rem;
@@ -237,6 +238,7 @@ main {
 
 .filtros .campo {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 2rem;
 }
@@ -244,6 +246,14 @@ main {
     font-size: 3rem;
     font-weight: 900;
     color: var(--gris-oscuro);
+}
+@media (min-width: 768px) {     
+    .filtros .campo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
 }
 .filtros select {
     flex: 1;
@@ -260,6 +270,12 @@ main {
 .listado-gastos h2 {
     color: var(--gris-oscuro);
     font-weight: 900;
+    text-align: center;
+}
+@media (min-width: 768px) { 
+    .listado-gastos h2 {
+text-align: left;
+    }
 }
 .no-gastos {
     text-align: center;
@@ -268,27 +284,56 @@ main {
 
 .gasto {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
     margin-bottom: 2rem;
     width: 100%;
 }
-
+@media (min-width: 768px) {
+    .gasto {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    }
 .cantidad-gasto {
     font-size: 2.4rem;
     color: var(--negro);
     font-weight: 900;
+    margin: 0;
 }
+
+
 
 .contenido-gasto {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 2rem;
+    text-align: center;
 }
 
+@media (min-width: 768px) { 
+    .contenido-gasto {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        text-align: left;
+    }
+}
 .contenido-gasto img {
+    width: 6rem;
+}
+@media (min-width: 768px) { 
+   .contenido-gasto img{
     width: 10rem;
+   }
 }
 
 .descripcion-gasto p {
